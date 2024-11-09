@@ -4,4 +4,12 @@ class ItemsController < ApplicationController
 
     render({ :template => "item_templates/list" })
   end
+
+  def form
+    render({ :template => "item_templates/form"})
+  end 
+
+  def redirect
+    redirect_to("/HTTP_303")
+  end
 end
