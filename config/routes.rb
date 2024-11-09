@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   get("/", { :controller => "items", :action => "index" })
 
-  get("/backdoor", { :controller => "items", :action => "form"})
+  get("/backdoor", { :controller => "items", :action => "display_form"})
 
-  get("/HTTP_303", { :controller =>"items", :action =>"redirect"})
+  post("/insert_item", { :controller => "items", :action => "create_new_item"})
+
 end
